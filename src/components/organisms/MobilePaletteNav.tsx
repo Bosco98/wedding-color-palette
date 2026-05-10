@@ -1,4 +1,4 @@
-import { Heart, Palette, Plus } from 'lucide-react';
+import { Heart, Menu, Plus, X } from 'lucide-react';
 
 import { PALETTE_MAKER_TITLE } from '../../data/palettes';
 import type { Palette as PaletteModel } from '../../types/palette';
@@ -30,13 +30,20 @@ export const MobilePaletteNav = ({
           <Heart className="h-5 w-5 fill-rose-400 text-rose-400" />
           <span className="font-serif italic font-bold text-slate-700">Bubu Wedding Palette</span>
         </div>
-        <button onClick={onToggleMenu} className="rounded-md p-2 hover:bg-slate-100">
-          <Palette className="h-6 w-6 text-slate-600" />
+        <button
+          onClick={onToggleMenu}
+          className="rounded-md p-2 hover:bg-slate-100"
+          aria-label={isOpen ? 'Close palette menu' : 'Open palette menu'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-palette-menu"
+          title={isOpen ? 'Close menu' : 'Open menu'}
+        >
+          {isOpen ? <X className="h-6 w-6 text-slate-600" /> : <Menu className="h-6 w-6 text-slate-600" />}
         </button>
       </div>
 
       {isOpen && (
-        <div className="animate-in fixed inset-0 z-50 overflow-y-auto bg-white fade-in md:hidden">
+        <div id="mobile-palette-menu" className="animate-in fixed inset-0 z-50 overflow-y-auto bg-white fade-in md:hidden">
           <div className="sticky top-0 flex items-center justify-between border-b border-slate-100 bg-white p-6">
             <h2 className="text-xl italic">Select Palette</h2>
             <button onClick={onCloseMenu} className="text-3xl font-light">
