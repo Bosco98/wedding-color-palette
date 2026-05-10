@@ -28,7 +28,7 @@ export const MobilePaletteNav = ({
       <div className="sticky top-0 z-10 flex items-center justify-between border-b border-slate-200 bg-white p-4 md:hidden">
         <div className="flex items-center gap-2">
           <Heart className="h-5 w-5 fill-rose-400 text-rose-400" />
-          <span className="font-serif italic font-bold text-slate-700">Bubu Wedding Palette</span>
+          <span className="font-serif italic font-bold text-slate-700">Wedding Palette</span>
         </div>
         <button
           onClick={onToggleMenu}
