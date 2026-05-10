@@ -14,8 +14,8 @@ import { buildShareText, copyText, createPaletteSearchUrls } from './utils/palet
 
 const App = () => {
   const [selectedPalette, setSelectedPalette] = useState<PaletteModel>({
-    title: PALETTE_MAKER_TITLE,
-    colors: [],
+    title: INITIAL_PALETTES[0]?.title ?? PALETTE_MAKER_TITLE,
+    colors: INITIAL_PALETTES[0]?.colors ?? [],
   });
   const [customColors, setCustomColors] = useState<PaletteColor[]>(DEFAULT_CUSTOM_COLORS);
   const [copiedHex, setCopiedHex] = useState<string | null>(null);
