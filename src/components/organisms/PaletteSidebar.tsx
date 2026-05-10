@@ -21,7 +21,7 @@ export const PaletteSidebar = ({
     <aside className="hidden w-72 flex-col overflow-hidden border-r border-slate-200 bg-white md:flex">
       <div className="flex items-center gap-2 border-b border-slate-100 p-6">
         <Heart className="h-5 w-5 fill-rose-400 text-rose-400" />
-        <h1 className="text-lg font-serif italic tracking-tight text-slate-700">Bubu Wedding Palette</h1>
+        <h1 className="text-lg font-serif italic tracking-tight text-slate-700">Wedding Palette</h1>
       </div>
       <nav className="flex-1 space-y-1 overflow-y-auto p-4">
         <button
