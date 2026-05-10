@@ -32,13 +32,14 @@ export const MobilePaletteNav = ({
         </div>
         <button
           onClick={onToggleMenu}
-          className="rounded-md p-2 hover:bg-slate-100"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-slate-700 hover:bg-slate-100"
           aria-label={isOpen ? 'Close palette menu' : 'Open palette menu'}
           aria-expanded={isOpen}
           aria-controls="mobile-palette-menu"
           title={isOpen ? 'Close menu' : 'Open menu'}
         >
-          {isOpen ? <X className="h-6 w-6 text-slate-600" /> : <Menu className="h-6 w-6 text-slate-600" />}
+          <span>{isOpen ? 'Close Designs' : 'Browse Designs'}</span>
+          {isOpen ? <X className="h-4 w-4 text-slate-600" /> : <Menu className="h-4 w-4 text-slate-600" />}
         </button>
       </div>
 
